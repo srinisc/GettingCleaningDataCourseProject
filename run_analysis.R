@@ -13,7 +13,7 @@ analyzeData <- function() {
     message("reading Activity Labels")
     activityLabels <-
         read.table(paste(
-            getwd(), "/data/UCI HAR Dataset/", "activity_labels.txt", sep = ''
+            getwd(), "/UCI HAR Dataset/", "activity_labels.txt", sep = ''
         ))
     #setting column names for Activity data
     colnames(activityLabels)[1] <- "activity_id"
@@ -23,13 +23,13 @@ analyzeData <- function() {
     message("reading xTrain")
     xTrain <-
         read.table(paste(
-            getwd(), "/data/UCI HAR Dataset/train/", "X_train.txt", sep = ''
+            getwd(), "/UCI HAR Dataset/train/", "X_train.txt", sep = ''
         ))
     
     #Reading xTest data files
     message("reading xTest")
     xTest <-
-        read.table(paste(getwd(), "/data/UCI HAR Dataset/test/", "X_test.txt", sep =
+        read.table(paste(getwd(), "/UCI HAR Dataset/test/", "X_test.txt", sep =
                              ''))
     #Binding rows of xTrain and xTest data
     xCombined <- rbind(xTrain, xTest)
@@ -37,21 +37,21 @@ analyzeData <- function() {
     #Reading Features data from files
     message("reading features")
     features <-
-        read.table(paste(getwd(), "/data/UCI HAR Dataset/", "features.txt", sep =
+        read.table(paste(getwd(), "/UCI HAR Dataset/", "features.txt", sep =
                              ''))
     
     #Reading Subject training data from files
     message("reading subject_train")
     sTr <-
         read.table(paste(
-            getwd(), "/data/UCI HAR Dataset/train/", "subject_train.txt", sep = ''
+            getwd(), "/UCI HAR Dataset/train/", "subject_train.txt", sep = ''
         ))
     
     #Reading Subject test data from files
     message("reading subject_test")
     sTe <-
         read.table(paste(
-            getwd(), "/data/UCI HAR Dataset/test/", "subject_test.txt", sep = ''
+            getwd(), "/UCI HAR Dataset/test/", "subject_test.txt", sep = ''
         ))
     
     #Row binding Subject training & test data
@@ -61,13 +61,13 @@ analyzeData <- function() {
     message("reading y_train")
     yTrain <-
         read.table(paste(
-            getwd(), "/data/UCI HAR Dataset/train/", "y_train.txt", sep = ''
+            getwd(), "/UCI HAR Dataset/train/", "y_train.txt", sep = ''
         ))
     
     #Reading Y test data from files
     message("reading y_test")
     yTest <-
-        read.table(paste(getwd(), "/data/UCI HAR Dataset/test/", "y_test.txt", sep =
+        read.table(paste(getwd(), "/UCI HAR Dataset/test/", "y_test.txt", sep =
                              ''))
     #Row binding Y data
     yCombined <- rbind(yTrain, yTest)
